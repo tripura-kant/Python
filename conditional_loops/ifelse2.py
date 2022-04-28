@@ -8,4 +8,3 @@ elif n < 0:
 else:
     print("Zero")
 
-
