@@ -1,0 +1,5 @@
+name: Commands
+hosts: web1
+name:
+tasks: Copy files
+  

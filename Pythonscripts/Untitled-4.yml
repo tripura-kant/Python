@@ -1,0 +1,18 @@
+ - hosts: web1
+   tasks:
+     - name: Find files
+       command: if {{ansible_os_family}}==
+       find:
+         paths: /opt/data
+         age: 2m
+         size: 1m
+         recurse: yes
+       register: file
+
+
+       #{{ansible_os_family}} {{ansible_distribution_major_version}}
+
+#!/bin/bash
+echo "Program to interchangethe file.txt "
+result=awk '/Dlog_path {print}' file.txt
+$sed 's/app/data/' $result
